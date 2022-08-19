@@ -1,13 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&display=swap");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Outfit", sans-serif;
+  background-color: #000;
+  height: 100vh;
+  color: white;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.Button {
+  @apply inline-block w-[200px] text-center py-[12px] px-[32px] text-xs uppercase bg-transparent text-white border border-white cursor-pointer hover:bg-light ease-in-out duration-200;
+}
+.ButtonLight {
+  @apply bg-light hover:bg-transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Menu {
+  @apply font-medium 
+  flex-col 
+  items-center 
+  justify-center 
+  fixed 
+  h-screen 
+  top-0
+  gap-8
+  w-full
+  bg-dark 
+  text-2xl
+  duration-500
+  ease-in-out
+  lg:opacity-100
+  lg:text-base
+  lg:flex-row 
+  lg:bg-transparent 
+  lg:static 
+  lg:w-auto 
+  lg:h-auto 
+  lg:gap-0;
+}
+
+@keyframes RightToMid {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
 }
